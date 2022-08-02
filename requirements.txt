@@ -3,3 +3,4 @@ pandas
 Flask_SQLAlchemy
 psycopg2
 qrcode
+PIL
