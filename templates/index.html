@@ -1,0 +1,129 @@
+﻿<!--sampleQRMAKERWebApp-->
+<!--2022.08.02-->
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html"; charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>QR Maker</title>
+    <!--
+    <style>
+    /*CSS RESET*/
+    *{margin:0; padding:0;}
+    img {border:0;}
+    </style>-->
+</head>
+<body >
+	
+	<div class="container">
+	
+	<figure class="text-center">
+	  <blockquote class="blockquote">
+	    <h1 class="display-4">QR<small class="text-muted">Maker</small></h3>
+	  </blockquote>
+	  <figcaption class="blockquote-footer">
+	    <cite title="Source Title">Convert input to a png file</cite>
+	  </figcaption>
+	</figure>
+	
+		<!--
+		<div class="row justify-content-center">
+		<div class="w-25 p-3 h-25"style="background:url('./20220719_09.jpg');">
+			<img src="applogo2.png"class="img-fluid"width="20%"height="15%">
+		</div>
+		</div>
+		-->
+	<!--
+	<div class="row justify-content-center">
+	<div class="w-25 p-3">
+		<img src="applogo.jpg">
+	</div>
+	</div>
+	-->
+	
+	
+	<!--
+	<!--<div class="w-50 p-3 mx-auto">
+	<div class="row justify-content-center">
+	<!--<div class="mx-auto px-auto">
+	<div class="col-3">
+		<h5>過去100件のtweetを取得</h5>
+	</div>	
+	</div>	
+	
+	<div class="row justify-content-center">
+	<div class="col-2">
+		<h2>検索フォーム</h2>
+	</div>
+	</div>
+	-->
+		
+		<form method="post" action="/export" name="export_form">
+			<!--入力欄-->
+			<div class="row justify-content-center">
+			<div class="col-4">
+			<div class="mb-3">
+				<label for="formGroupExampleInput"class="form-label">QRに変換したいコンテンツ</label>
+				<input type="text"name="keyword"class="form-control" id="formGroupExampleInput" placeholder="URL・文章etc">
+			</div>
+			</div>
+			</div>
+			
+			<!--version-->
+			<div class="row justify-content-center">
+			<div class="col-4">
+			<div class="mb-3">
+				<label for="formGroupExampleInput2"class="form-label">version</label>
+				<input type="number"name="version"value="5"min="1"max="40"class="form-control" id="formGroupExampleInput2">
+			</div>
+			</div>
+			</div>
+			
+			<!--error_correction-->
+			<div class="row justify-content-center">
+			<div class="col-4">
+			<div class="mb-3">
+				<label for="formGroupExampleInput2"class="form-label">誤り訂正機能</label>
+				<select name="error_correction"class="form-control" id="formGroupExampleInput2">
+					<option value="1">約7%</option>
+					<option value="2">約15%</option>
+					<option value="3">約25%</option>
+					<option value="4">約30%</option>
+				</select>
+			</div>
+			</div>
+			</div>
+			
+			<div class="row justify-content-center">
+			<div class="col-1">
+			<input type="submit" value="finish"class="btn btn-outline-dark">
+			</div>
+			</div>
+			
+		</form>
+		
+		
+		
+		
+		
+		
+	</div>
+	
+	<!--以下使用しない
+	{%for post in posts%}
+		<div>{{post.mainname}}：{{post.subname}}：
+		{%if post.comb_state==1%}
+			良い：
+		{%else%}
+			悪い：
+		{%endif%}
+		<a href="/{{post.id}}/delete">削除</a></div>
+		
+	{%endfor%}
+	-->
+	
+	{%block content%}
+	{%endblock%}
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+<html>
