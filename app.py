@@ -114,9 +114,14 @@ def export_action():
     
     return send_file(
         downloadfilename,
+        as_attachment=True
+    )
+    """
+    return send_file(
+        downloadfilename,
         as_attachment=True,
         attachment_filename=downloadfilename,
-    )
+    )"""
 
 
 
