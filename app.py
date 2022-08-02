@@ -16,8 +16,8 @@ import qrcode
 
 
 ###herokuデプロイ時###
-DATABASE_URL = os.environ['DATABASE_URL']
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+#DATABASE_URL = os.environ['DATABASE_URL']
+#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 app = Flask(__name__)
 
@@ -25,13 +25,13 @@ app = Flask(__name__)
 
 #["DATABASE_URL"]はheroku側の環境変数
 ##以下　herokuデプロイ時必須##
-
+"""
 uri=os.getenv("DATABASE_URL")
 if uri.startswith("postgres://"):
     uri=uri.replace("postgres://","postgresql://",1)
 app.config['SQLALCHEMY_DATABASE_URI'] =uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
+"""
 
 db = SQLAlchemy(app)
 
