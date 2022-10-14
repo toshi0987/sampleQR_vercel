@@ -11,7 +11,7 @@ import json
 #from dotenv import load_dotenv
 import pandas as pd
 import datetime
-import psycopg2
+#import psycopg2
 import qrcode
 
 
@@ -130,10 +130,10 @@ def export_action():
 
 
 
-
+"""
 if __name__ == "__main__":
     #herokuデプロイ時
     port=os.getenv("PORT")
     app.run(host="0.0.0.0",port=port)
     ##ローカル環境##
-    #app.run(debug=False)
+    #app.run(debug=False)"""
