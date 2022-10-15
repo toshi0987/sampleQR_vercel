@@ -133,7 +133,7 @@ def export_action():
 
 if __name__ == "__main__":
     #herokuデプロイ時
-    port=os.getenv("PORT")
-    app.run(host="0.0.0.0",port=port)
+    #port=os.getenv("PORT")
+    #app.run(host="0.0.0.0",port=port)
     ##ローカル環境##
-    #app.run(debug=False)
+    app.run(debug=False)
